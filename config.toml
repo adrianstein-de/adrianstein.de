@@ -1,0 +1,65 @@
+baseURL = 'https://adrianstein.de/'
+languageCode = 'de-de'
+title = 'Home'
+copyright = 'Adrian Stein'
+
+theme = "blogge-hugo-themee"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "portfolio"
+    name = "Portfolio"
+    url = "/portfolio"
+    weight = 2
+    [[menu.main]]
+      parent = "portfolio"
+      identifier = "architektur"
+      name = "Architektur"
+      url = "/portfolio/architektur"
+      weight = 1
+    [[menu.main]]
+      parent = "portfolio"
+      identifier = "mood"
+      name = "Mood"
+      url = "/portfolio/mood"
+      weight = 2
+    [[menu.main]]
+      parent = "portfolio"
+      identifier = "portrait"
+      name = "Portrait"
+      url = "/portfolio/portrait"
+      weight = 3
+    [[menu.main]]
+      parent = "portfolio"
+      identifier = "Produkt"
+      name = "produkt"
+      url = "/portfolio/produkt"
+      weight = 4
+    [[menu.main]]
+      parent = "portfolio"
+      identifier = "reportage"
+      name = "Reportage"
+      url = "/portfolio/reportage"
+      weight = 5
+  [[menu.main]]
+    identifier = "leistungen"
+    name = "Meine Leistungen"
+    url = "/meine-leistungen"
+    weight = 3
+
+[params]
+  summarylength = 80
+  logo = "images/logo.png"
+  contactmailaddress = "info@adrianstein.de"
+  contactnumber = "xxxx"
+  contactnumberseperated = "04131 99 49 359"
+  UsernameInsta = "addi_stone"
+  trendingBlogIcon = "images/icon.svg"
+
+[taxonomies]
+  tag = "tags"

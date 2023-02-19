@@ -1,0 +1,41 @@
+<head>
+  <meta charset="utf-8" />
+  <title>{{ .Title }} - Adrian Stein</title>
+
+  <meta name="title" content="{{ .Title }} - Adrian Stein">
+  <meta name="description" content="Ihr Fotograf aus Bielefeld">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="twitter:card" content="/images/logo-180.png">
+  <meta name="twitter:title" content="{{ .Title }} - Adrian Stein">
+  <meta name="twitter:description" content="Ihr Fotograf aus Bielefeld">
+  <meta name="twitter:image" content="/images/logo-180.png">
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ .Title }} - Adrian Stein">
+  <meta property="og:description" content="Ihr Fotograf aus Bielefeld">
+  <meta property="og:site_name" content="{{ .Title }} - Adrian Stein">
+  <meta property="og:image" content="/images/logo-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+  {{ with .Params.author }}
+  <meta name="author" content="{{ . }}">
+  {{ end }}
+  {{ hugo.Generator }}
+
+  <link rel="stylesheet" href={{ "plugins/font-awesome/css/font-awesome.min.css" | absURL }} />
+  {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | minify}}
+  <link href="{{ $style.Permalink }}" rel="stylesheet" />
+
+  <link rel="shortcut icon" href={{ "images/favicon.ico" | absURL }} type="image/x-icon" />
+
+  <link rel="icon" sizes="192x192" href={{ "images/icon/192.png" | absURL }}>
+  <link rel="apple-touch-icon" sizes="120x120" href={{ "images/icon/120.png" | absURL }}>
+  <link rel="apple-touch-icon" sizes="152x152" href={{ "images/icon/152.png" | absURL }}>
+  <!-- JQuery -->
+  {{ $jquery := resources.Get "js/jquery-3.6.1.min.js" | minify }}
+  <script src="{{ $jquery.Permalink }}"></script>
+  <!-- Ajax Loading -->
+  {{ $ajax := resources.Get "js/ajax.js" | minify }}
+  <script src="{{ $ajax.Permalink }}"></script>
+</head>

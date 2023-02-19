@@ -1,0 +1,40 @@
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 mx-auto text-center mb-4">
+        <div class="footer-logo">
+          <img style="max-height: 15vw; max-width: 15vh;" src={{ .Site.Params.logo | absURL }} alt="logo" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <div class="sociale-icon">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/{{ .Site.Params.UsernameInsta }}">
+                <i class="fa fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="copy-right">
+          <p>© Copyright {{ dateFormat "2006" now }} - <a class="copy-right-rights">Alle Rechte vorbehalten</a> <a class="clickable" href=/impressum>Adrian Stein</a> </p>
+          <p><a class="clickable" href=/datenschutz>Datenschutz</a> | <a class="clickable" href=/impressum>Impressum</a></p>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+<!-- Vendor JS -->
+{{ $vendor:= resources.Get "js/vendor.js" | minify }}
+<script src="{{ $vendor.Permalink }}"></script>
+<!-- {{ $formHandler:= resources.Get "js/form-handler.js" | minify }}
+<script src="{{ $formHandler.Permalink }}"></script> -->
+<!-- Main JS -->
+{{ $script := resources.Get "js/script.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>

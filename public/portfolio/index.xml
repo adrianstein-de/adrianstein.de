@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolio on Home</title>
+    <link>https://adrianstein.de/portfolio/</link>
+    <description>Recent content in Portfolio on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <copyright>Adrian Stein</copyright>
+    <lastBuildDate>Tue, 01 Nov 2022 23:15:56 +0000</lastBuildDate><atom:link href="https://adrianstein.de/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architektur</title>
+      <link>https://adrianstein.de/portfolio/architektur/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adrianstein.de/portfolio/architektur/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mood</title>
+      <link>https://adrianstein.de/portfolio/mood/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adrianstein.de/portfolio/mood/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Portrait</title>
+      <link>https://adrianstein.de/portfolio/portrait/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adrianstein.de/portfolio/portrait/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Produkt</title>
+      <link>https://adrianstein.de/portfolio/produkt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adrianstein.de/portfolio/produkt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reportage</title>
+      <link>https://adrianstein.de/portfolio/reportage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://adrianstein.de/portfolio/reportage/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

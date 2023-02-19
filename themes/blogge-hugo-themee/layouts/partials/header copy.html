@@ -1,0 +1,68 @@
+<!-- Navbar Start -->
+<div class="header" id="cp-header">
+  <nav class="main-nav navbar navbar-expand-lg">
+    <div class="container">
+      <a class="clickable mb-1" href={{ "" | absURL }}>
+        <img id="cp-logo" class="logo-main" src={{ .Site.Params.logo | absURL }} alt="logo" />
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <div class="collapse navbar-collapse nav-list" id="mainNav">
+          <ul class="navbar-nav ml-auto">
+            {{ $currentPage := . }}
+            {{ $section := .Site.GetPage $currentPage.Section }}
+            {{ range .Site.Menus.main }}
+              {{ if .HasChildren}}
+                <li class="dropdown nav-item">
+                  <a class="dropbtn nav-link {{if $section.IsMenuCurrent "main" . }}is-active{{end}}" href={{ .URL | absURL }}>{{ .Name }} ▾</a>
+                    <ul style="margin-right: 0; padding-right: 0;" class="dropdown-content navbar-nav ml-auto">
+                    {{ range .Children }}
+                      <li style="list-style: none;" class="nav-item">
+                        <a class="clickable nav-link" style="font-size: 14px;" href={{ .URL | absURL }}>{{ .Name }}</a>
+                      </li>
+                    {{ end }}
+                    </ul>
+                </li>
+              {{ end }}
+              {{ if not .HasChildren}}
+                <li class="nav-item">
+                  <a class="clickable nav-link " href={{ .URL | absURL }}>{{ .Name }}</a>
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+          <ul class="main-nav-social">
+            <li>
+              <a href="https://www.instagram.com/{{ .Site.Params.instaUsername }}">
+                <i class="fa fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="mailto:info@adrianstein.de">
+                <i class="fa fa-envelope"></i></a>
+            </li>
+          </ul>
+          <ul style="list-style: none;" class="navbar-nav">
+            <li class="nav-item" style="padding-left: 0px;">
+              <a class="nav-link" style="color:gray;; font-size: small;">{{ $.Site.Params.contactmailaddress }}</a>
+            </li>
+          </ul>
+        </div>
+        {{ if .Site.Params.enableSearch }}
+        <li class="grid place-items-center">
+          <span class="open-search inline-block cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="10" cy="10" r="7" />
+              <line x1="21" y1="21" x2="15" y2="15" />
+            </svg>
+          </span>
+        </li>
+        {{ end }}
+      </ul>
+      </div>
+    </div>
+  </nav>
+</div>

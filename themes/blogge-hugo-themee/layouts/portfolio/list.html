@@ -1,0 +1,29 @@
+{{ define "main" }}
+    <section class="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col mb-5 mt-5">
+                    <h2>Portfolio</h2>
+                </div>
+            </div>
+            <div class="row g-2">
+                {{ range $i, $.Site.RegularPages }} {{ if eq .Params.portfolio true }}
+                    <div class="text-tablet col mb-1 mt-5">
+                        <h4 class="text-tablet"> {{ .Title }} </h4>
+                    </div>
+                    <div class="container-overlay p-1 col-lg-4 col-md-6 col-sm-12 square">
+                        <a class="clickable" href="/portfolio/{{ .Params.category }}" style="height: 100%; width: 100%; ">
+                            <div class="image">
+                                <div class="img" style="background-image: url('{{ .Params.thumbnail  | absURL }}');">
+                                    <div class="overlay">
+                                        <div class="text"> {{ .Title }} </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {{ end }} {{ end }}
+            </div>
+        </div>
+    </section>
+{{ end }}

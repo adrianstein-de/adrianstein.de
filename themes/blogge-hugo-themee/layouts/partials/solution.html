@@ -1,0 +1,15 @@
+<section class="blog">
+    <div class="container">
+        <div class="row">
+            {{ range $i, $.Site.RegularPages }} {{ if eq .Params.solution true }}
+                <div class="col-lg col-md-6 col-sm-12 my-auto">
+                    <h3 class="mb-4"> {{ .Title }} </h4>
+                    <p style="line-height: 1.6;">{{ .Summary }}</p>
+                </div>
+                <div class="col-lg col-md-6 col-sm-12">
+                    <img class="img-thumbnail mb-4" src="{{ .Params.thumbnail  | absURL }}" alt="blog-thum"/>
+                </div>
+            {{ end }} {{ end }}
+        </div>
+    </div>
+</section>
